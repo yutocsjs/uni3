@@ -1,49 +1,49 @@
 img{
-    width: 300px; /* 幅を200pxに統一 */
-    height: 200px; /* 高さを150pxに統一 */
+    width: 20vw; /* 幅を200pxに統一 */
+    height: 13vw; /* 高さを150pxに統一 */
     object-fit: cover; /* アスペクト比を維持してトリミング */
-    border-radius: 8px;
+    border-radius: 1vw;
 }
 header {
-    padding-left: 3%;
+    padding-left: 3vw;
     color:green;
     font-family: initial;
     text-shadow: 6px 3px 4px rgb(89, 187, 80);
-    font-size: 200%;
-    border: 10px solid green;
+    font-size: 5vw;
+    border: 1vw solid green;
     font-weight:bold;
 }
 h1 {
-    padding-left: 3%;
-    text-shadow: 6px 3px 3px rgb(0, 0, 0);
+    padding-left: 3vw;
+    text-shadow: 6px 6px 3px rgb(0, 0, 0);
 }
 .txt-contents {
-    padding-right: 25%;
+    padding-right: 2vw;
     position: relative;
     text-align: center;
-    max-width: 100%;
 }
 
 .lesson{
-    flex: 0 1 23%;  /* 幅を25%に設定 */
-    padding-bottom: 10%;
-    margin:0%;
+    flex: 0 5 15vw;  /* 幅を25%に設定 */
+    padding-bottom: 5vw;
+    margin:0vw;
     z-index: 1;
 }
 
 .anime {
     text-align: left;
-    padding-top: 0%;
-    padding-left: 3%;
-    margin: 0%;
+    padding-top: 0vw;
+    padding-left: 3vw;
+    margin: 0vw;
     direction: ltr;
     display: block;
 }
 
 .lessons {
     display: flex !important;
+    padding-left: 3vw;
     flex-wrap: wrap;  /* 複数行に折り返し */
-    gap: 20px; 
+    gap: 3vw; 
     justify-content: center; /* アイテム間の隙間 */
 }
 
@@ -54,9 +54,7 @@ h1 {
 
     z-index: -1;
     object-fit: cover;
-    width: 300px; /* 幅を200pxに統一 */
-    height: 200px;
-   
+    
 }
 
 p {
@@ -65,31 +63,22 @@ p {
 }
 
 @media (max-width: 768px) {
-    .lessons-container {
-        grid-template-columns: 1fr; /* 小さい画面では1列にする */
+    .lesson {
+        flex: 0 1 calc(50% - 10px);
     }
-}
 
-
-.lessons-container{
-display: grid;
-grid-template-columns: repeat(3, 1fr); /* 3列を設定 */
-grid-template-rows: auto auto; /* 2行を設定 */
-gap: 0px;
-padding: 0%;
+    img {
+        width: 40vw;
+        height:30vw
+    }
 }
 
 /* lessons-container 配下の lesson のみ対象 */
 
 
-.lessons-container .lesson:nth-child(4),
-.lessons-container .lesson:nth-child(5) {
-    grid-column: span 1; /* 1列の幅にする */
-}
+
 body {
-    padding-left: 3%;
-    padding-top: 1%;
-    padding-right: 1%;
+   
     color: white;
     background-size: cover;
     background-position: center; /* 画像の中央を表示 */
@@ -99,13 +88,11 @@ body {
     background-image: url(https://media.istockphoto.com/id/812090812/photo/view-of-the-bay.jpg?s=612x612&w=0&k=20&c=n5Tv66WnEyujD9HljnxsH3ijt8W1yrp19CiwT2SL-N0=)
 }
 
-*{
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* padding や border も含めてサイズを計算 */
-}
-
-html, body {
-    width: 100%;
-    height: 100%; 
+    width: 100%; /* 横幅を100%に */
+    height: 100%; /* 高さを100%に */
+    box-sizing: border-box;
+    overflow-x: hidden; /* 横スクロール防止 */
 }
