@@ -6,11 +6,12 @@ img{
 }
 header {
     padding-left: 3vw;
-    color:green;
+    color:rgb(255, 255, 255);
     font-family: initial;
-    text-shadow: 6px 3px 4px rgb(89, 187, 80);
+    text-shadow: 6px 3px 4px rgb(48, 124, 41);
     font-size: 5vw;
-    border: 1vw solid green;
+    opacity: 0.7;
+    border: 1vw solid rgb(49, 203, 49);
     font-weight:bold;
 }
 h1 {
